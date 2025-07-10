@@ -1,0 +1,70 @@
+{% extends 'admin/admin_base.html' %} {% block content %}
+<h1>{{ form_title }}</h1>
+<hr />
+<div class="card">
+  <div class="card-body">
+    <form method="post" novalidate>
+      {{ form.hidden_tag() }}
+
+      <div class="mb-3">
+        {{ form.username.label(class="form-label") }} {{
+        form.username(class="form-control" + (" is-invalid" if
+        form.username.errors else "")) }} {% for error in form.username.errors
+        %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+      </div>
+
+      <div class="mb-3">
+        {{ form.email.label(class="form-label") }} {{
+        form.email(class="form-control" + (" is-invalid" if form.email.errors
+        else "")) }} {% for error in form.email.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+      </div>
+
+      <div class="mb-3">
+        {{ form.full_name.label(class="form-label") }} {{
+        form.full_name(class="form-control" + (" is-invalid" if
+        form.full_name.errors else "")) }} {% for error in form.full_name.errors
+        %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+      </div>
+
+      <div class="mb-3 form-check">
+        {{ form.is_admin(class="form-check-input") }} {{
+        form.is_admin.label(class="form-check-label") }}
+      </div>
+
+      <hr />
+      <p class="text-muted">
+        Isi password hanya jika ingin membuat password baru atau mengubah
+        password yang sudah ada.
+      </p>
+
+      <div class="mb-3">
+        {{ form.password.label(class="form-label") }} {{
+        form.password(class="form-control" + (" is-invalid" if
+        form.password.errors else "")) }} {% for error in form.password.errors
+        %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+      </div>
+
+      <div class="mb-3">
+        {{ form.confirm_password.label(class="form-label") }} {{
+        form.confirm_password(class="form-control" + (" is-invalid" if
+        form.confirm_password.errors else "")) }} {% for error in
+        form.confirm_password.errors %}
+        <div class="invalid-feedback">{{ error }}</div>
+        {% endfor %}
+      </div>
+
+      <hr />
+      {{ form.submit(class="btn btn-primary") }}
+      <a href="{{ url_for('.users_list') }}" class="btn btn-secondary">Batal</a>
+    </form>
+  </div>
+</div>
+{% endblock %}

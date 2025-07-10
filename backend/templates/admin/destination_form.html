@@ -1,0 +1,109 @@
+{% extends 'admin/admin_base.html' %}
+
+{% block content %}
+  <h1>{{ form_title }}</h1>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            
+            <div class="mb-3">
+                {{ form.name.label(class="form-label") }}
+                {{ form.name(class="form-control" + (" is-invalid" if form.name.errors else ""), placeholder="Nama Tempat Wisata", required=true) }}
+                {% for error in form.name.errors %}
+                    <div class="invalid-feedback d-block">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+            <div class="mb-3">
+                {{ form.description.label(class="form-label") }}
+                {{ form.description(class="form-control", rows=4) }}
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    {{ form.latitude.label(class="form-label") }}
+                    {{ form.latitude(class="form-control" + (" is-invalid" if form.latitude.errors else ""), required=true, type="number", step="any") }}
+                    {% for error in form.latitude.errors %}
+                        <div class="invalid-feedback d-block">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-6 mb-3">
+                    {{ form.longitude.label(class="form-label") }}
+                    {{ form.longitude(class="form-control" + (" is-invalid" if form.longitude.errors else ""), required=true, type="number", step="any") }}
+                    {% for error in form.longitude.errors %}
+                        <div class="invalid-feedback d-block">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <div class="mb-3">
+                {{ form.address.label(class="form-label") }}
+                {{ form.address(class="form-control", rows=2) }}
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    {{ form.city.label(class="form-label") }}
+                    {{ form.city(class="form-control") }}
+                </div>
+                <div class="col-md-6 mb-3">
+                    {{ form.country.label(class="form-label") }}
+                    {{ form.country(class="form-control") }}
+                </div>
+            </div>
+
+            <div class="mb-3">
+                {{ form.category.label(class="form-label") }}
+                {{ form.category(class="form-control") }}
+                <small class="form-text text-muted">{{ form.category.description }}</small>
+            </div>
+
+            <div class="mb-3">
+                {{ form.tags.label(class="form-label") }}
+                {{ form.tags(class="form-control") }}
+                <small class="form-text text-muted">{{ form.tags.description }}</small>
+            </div>
+
+            <div class="mb-3">
+                {{ form.image_url.label(class="form-label") }}
+                {{ form.image_url(class="form-control" + (" is-invalid" if form.image_url.errors else ""), placeholder="https://example.com/image.jpg", type="url") }}
+                {% for error in form.image_url.errors %}
+                    <div class="invalid-feedback d-block">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    {{ form.avg_rating.label(class="form-label") }}
+                    {{ form.avg_rating(class="form-control" + (" is-invalid" if form.avg_rating.errors else ""), placeholder="Contoh: 4.5", type="number", step="0.01", min="0", max="5") }}
+                    {% for error in form.avg_rating.errors %}
+                        <div class="invalid-feedback d-block">{{ error }}</div>
+                    {% endfor %}
+                </div>
+                <div class="col-md-6 mb-3">
+                    {{ form.typical_visit_duration_minutes.label(class="form-label") }}
+                    {{ form.typical_visit_duration_minutes(class="form-control" + (" is-invalid" if form.typical_visit_duration_minutes.errors else ""), placeholder="Contoh: 120", type="number", min="0") }}
+                    {% for error in form.typical_visit_duration_minutes.errors %}
+                        <div class="invalid-feedback d-block">{{ error }}</div>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                {{ form.opening_hours.label(class="form-label") }}
+                {{ form.opening_hours(class="form-control" + (" is-invalid" if form.opening_hours.errors else ""), rows=5) }}
+                <small class="form-text text-muted">{{ form.opening_hours.description }}</small>
+                {% for error in form.opening_hours.errors %}
+                    <div class="invalid-feedback d-block">{{ error }}</div>
+                {% endfor %}
+            </div>
+
+            <hr>
+            {{ form.submit(class="btn btn-primary") }}
+            <a href="{{ url_for('.destinations_list') }}" class="btn btn-secondary">Batal</a>
+        </form>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "admin/admin_base.html" %} {% block content %}
+<h1>Dashboard</h1>
+<p>Selamat datang, **{{ session.get('admin_username', 'Admin') }}**!</p>
+<div class="row mt-4">
+  <div class="col-md-4">
+    <div class="card text-center text-white bg-primary mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Total Pengguna</h5>
+        <p class="card-text fs-2 fw-bold">{{ user_count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center text-white bg-success mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Total Destinasi</h5>
+        <p class="card-text fs-2 fw-bold">{{ destination_count }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="card text-center text-white bg-info mb-3">
+      <div class="card-body">
+        <h5 class="card-title">Total Itinerary</h5>
+        <p class="card-text fs-2 fw-bold">{{ itinerary_count }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
