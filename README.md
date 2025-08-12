@@ -1,4 +1,21 @@
-### **Panduan Instalasi Proyek "Travel Mind" Secara Manual**
+###
+![Dashboard Aplikasi](./dashboard.png) <br>
+**Travel Mind** adalah platform web perencanaan itinerary perjalanan cerdas yang dirancang untuk membantu wisatawan individu dalam membuat, mengelola, dan memvisualisasikan rencana perjalanan mereka. Sistem ini memanfaatkan preferensi wisatawan untuk memberikan rekomendasi destinasi dan membantu menyusun jadwal perjalanan yang dipersonalisasi.
+
+**Tujuan Utama Sistem:**
+<br>
+●	Perencanaan Perjalanan yang Dipersonalisasi: Menyediakan alat bagi wisatawan untuk membuat itinerary yang disesuaikan dengan minat, gaya perjalanan, durasi, dan tujuan spesifik mereka, dengan bantuan rekomendasi berbasis AI. <br>
+●	Efisiensi dan Kemudahan Wisatawan: Mengurangi kompleksitas dan waktu yang dibutuhkan untuk merencanakan perjalanan dengan antarmuka yang intuitif dan fitur pengelolaan itinerary yang terpusat.<br>
+●	Visualisasi Perjalanan yang Jelas: Membantu wisatawan memahami rencana perjalanan mereka melalui tampilan daftar destinasi per hari yang terstruktur dan representasi visual di peta interaktif.<br>
+●	Fleksibilitas Pengelolaan: Memberikan kemampuan kepada wisatawan untuk dengan mudah memodifikasi, mengatur ulang, dan menyimpan berbagai versi itinerary mereka.<br>
+
+**Ruang Lingkup Sistem:**<br>
+●	Perencanaan Perjalanan yang Dipersonalisasi: Menyediakan alat bagi wisatawan untuk membuat itinerary yang disesuaikan dengan minat, gaya perjalanan, durasi, dan tujuan spesifik mereka, dengan bantuan rekomendasi berbasis AI.<br>
+●	Efisiensi dan Kemudahan Wisatawan: Mengurangi kompleksitas dan waktu yang dibutuhkan untuk merencanakan perjalanan dengan antarmuka yang intuitif dan fitur pengelolaan itinerary yang terpusat.<br>
+●	Visualisasi Perjalanan yang Jelas: Membantu wisatawan memahami rencana perjalanan mereka melalui tampilan daftar destinasi per hari yang terstruktur dan representasi visual di peta interaktif.<br>
+●	Fleksibilitas Pengelolaan: Memberikan kemampuan kepada wisatawan untuk dengan mudah memodifikasi, mengatur ulang, dan menyimpan berbagai versi itinerary mereka.<br>
+
+**Panduan Instalasi Proyek "Travel Mind" Secara Manual**
 
 Berikut adalah cara untuk menjalankan proyek "Travel Mind" di komputermu. Proyek ini terdiri dari dua bagian: **Backend** (server) dan **Frontend** (tampilan website). Kamu perlu menjalankan keduanya secara bersamaan.
 
