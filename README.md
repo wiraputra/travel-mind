@@ -1,5 +1,5 @@
 ###
-<img src="travel-mind/dashboard.png" alt="Dashboard" width="250"> <br>
+<img src="dashboard.png" alt="Dashboard" width="250"> <br>
 **Travel Mind** adalah platform web perencanaan itinerary perjalanan cerdas yang dirancang untuk membantu wisatawan individu dalam membuat, mengelola, dan memvisualisasikan rencana perjalanan mereka. Sistem ini memanfaatkan preferensi wisatawan untuk memberikan rekomendasi destinasi dan membantu menyusun jadwal perjalanan yang dipersonalisasi.
 
 **Tujuan Utama Sistem:**
